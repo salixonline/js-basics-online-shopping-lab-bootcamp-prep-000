@@ -29,8 +29,7 @@ function viewCart() {
     for (var i = 0; i < cart.length; i++) {
       var key = Object.keys(cart[i])[0];
       var price = cart[i][key];
-      if (i === cart.length - 1) {
-        // msg += " and ";
+      if (i === cart.length - 1 && i !== 0) {
         msg.push(`and ${key} at $${price}`);
       } else {
         msg.push(`${key} at $${price}`);
