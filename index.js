@@ -50,6 +50,7 @@ function total() {
   return total;
 }
 
+// This version removes all the repeated items if found.
 function removeFromCart(item) {
   // write your code here
   var found = false;
