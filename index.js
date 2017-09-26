@@ -59,6 +59,7 @@ function removeFromCart(item) {
       cart = [...cart, ...temp];
     } else if (i === cart.length - 1) {
       console.log("That item is not in your cart.");
+      return;
     }
   }
   return cart;
@@ -67,11 +68,4 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   // write your code here
 }
-addToCart("mango");
-addToCart("nuts");
-viewCart();
-setCart([]);
-addToCart("orange");
-addToCart("pear");
-addToCart("quince");
-viewCart();
+
