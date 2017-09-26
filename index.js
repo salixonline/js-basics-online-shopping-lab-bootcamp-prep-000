@@ -11,9 +11,6 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
- /*item = {
-   item
- };*/
  var price = Math.floor(Math.random() * 100) + 1;
  cart.push( { [item]: price } );
  console.log(`${item} has been added to your cart.`);
@@ -45,10 +42,22 @@ function viewCart() {
 
 function total() {
   // write your code here
+  var total = 0;
+  for (var i = 0; i < cart.length; i++) {
+    var key = Object.keys(cart[i])[0];
+    total += cart[i][key];
+  }
+  return total;
 }
 
 function removeFromCart(item) {
   // write your code here
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].hasOwnProperty(item)) {
+      delete cart[i][item];
+    }
+  }
+  return cart;
 }
 
 function placeOrder(cardNumber) {
